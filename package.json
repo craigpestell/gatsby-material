@@ -26,6 +26,7 @@
         "font-awesome": "^4.7.0",
         "fusioncharts": "^3.12.2",
         "immutable": "^3.8.2",
+        "is-url": "^1.2.4",
         "material-ui-image": "^3.0.0",
         "react": "^16.5.2",
         "react-bootstrap-table": "^4.3.1",
