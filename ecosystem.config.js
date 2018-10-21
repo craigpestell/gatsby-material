@@ -23,7 +23,7 @@ module.exports = {
     development: {
       user: 'repn',
 
-      arguments: ['run', 'dev-server'],
+      arguments: ['dev-server'],
       host: 'kali-dev',
       ref: 'origin/master',
       repo: 'git@github.com:craigpestell/kali-posts-admin.git',
