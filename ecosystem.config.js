@@ -2,9 +2,7 @@ module.exports = {
   apps: [
     {
       name: 'Posts Admin (CMS)',
-      script: 'npm',
-      args: 'run dev-server',
-
+      script: 'npm run dev-server',
       // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
       instances: 1,
       autorestart: true,
