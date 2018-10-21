@@ -3,9 +3,9 @@ module.exports = {
     {
       name: 'Posts Admin (CMS)',
       script: 'npm',
+      args: ['run', 'dev-server'],
 
       // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
-      args: 'run',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -22,8 +22,6 @@ module.exports = {
   deploy: {
     development: {
       user: 'repn',
-
-      args: ['run', 'dev-server'],
       host: 'kali-dev',
       ref: 'origin/master',
       repo: 'git@github.com:craigpestell/kali-posts-admin.git',
