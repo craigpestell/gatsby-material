@@ -3,8 +3,7 @@ module.exports = {
     {
       name: 'Posts Admin (CMS)',
       script: 'npm',
-      // args: 'run dev-server',
-      node_args: 'run dev-server',
+      args: 'dev-server',
 
       // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
       instances: 1,
