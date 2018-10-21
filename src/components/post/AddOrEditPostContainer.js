@@ -6,6 +6,7 @@ import toastr from 'toastr';
 import * as postAction from '../../store/actions/PostAction';
 import * as authorAction from '../../store/actions/AuthorAction';
 import PostForm from './PostForm'; // eslint-disable-line import/no-named-as-default
+import SlateEditor from '../SlateEditor';
 import { authorsFormattedForDropdown } from '../../store/selectors/selectors'; // eslint-disable-line import/no-named-as-default
 
 export class AddOrEditPostContainer extends React.Component {
@@ -54,7 +55,7 @@ export class AddOrEditPostContainer extends React.Component {
   render() {
     const { initialValues } = this.props;
     const heading = initialValues && initialValues.id ? 'Edit' : 'Add';
-
+  console.log('initialValues: ', initialValues);
     return (
       <div className="container">
         <PostForm
@@ -64,6 +65,7 @@ export class AddOrEditPostContainer extends React.Component {
           handleCancel={this.handleCancel}
           initialValues={this.props.initialValues}
         />
+        {initialValues && <SlateEditor values={initialValues} />}
       </div>
     );
   }

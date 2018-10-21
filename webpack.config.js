@@ -43,14 +43,13 @@ module.exports = {
     contentBase: path.join(__dirname, 'public'),
     historyApiFallback: true, // this prevents the default browser full page refresh on form submission and link change
     proxy: {
-      '/api/*' : {
-        target: 'http://localhost:3000/', 
+      '/api/*': {
+        target: 'http://localhost:3000/',
         changeOrigin: true,
         /*pathRewrite: {
         '^/api': ''
         }*/
-      }
-      
+      },
     },
     // It suppress error shown in console, so it has to be set to false.
     quiet: false,
@@ -66,6 +65,11 @@ module.exports = {
       timings: false,
       chunks: false,
       chunkModules: false,
+    },
+  },
+  resolve: {
+    alias: {
+      'slate-drop-or-paste-images': path.resolve(__dirname, 'packages/slate-drop-or-paste-images'),
     },
   },
 };

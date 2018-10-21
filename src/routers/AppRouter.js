@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+
 import LandingPage from '../components/LandingPage';
 import AboutPage from '../components/AboutPage';
 import HomePage from '../components/HomePage';
@@ -25,6 +27,12 @@ import AddOrEditPostContainer from '../components/post/AddOrEditPostContainer';
 const AppRouter = () => (
   <BrowserRouter>
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>My Title</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+        <script src="//widget.cloudinary.com/global/all.js" type="text/javascript" />
+      </Helmet>
       <Switch>
         <PublicRoute path="/" component={LandingPage} exact={true} />
         <PrivateRoute path="/home" component={HomePage} />
