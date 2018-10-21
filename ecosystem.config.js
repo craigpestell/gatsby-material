@@ -4,6 +4,7 @@ module.exports = {
       name: 'Posts Admin (CMS)',
       script: './runner.sh',
       exec_interpreter: 'bash',
+      "exec_mode" : "fork_mode",
       // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
       instances: 1,
       autorestart: true,
