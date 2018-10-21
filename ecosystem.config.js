@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'API',
+      name: 'Posts Admin (CMS)',
       script: 'npm',
 
       // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
